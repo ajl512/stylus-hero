@@ -1,0 +1,16 @@
+@import "./unit.styl"
+// 《-----------字体设置------》
+fz() {
+  font-size: unitCover(arguments[0])
+}
+fw() {
+  font-weight: arguments[0]
+}
+fc() {
+  color arguments[0]
+}
+font() {
+  font-size: arguments[0] ? unitCover(arguments[0]) : inherit
+  color: arguments[1] ? arguments[1] : inherit
+  font-weight: arguments[2] ? arguments[2] : inherit
+}

@@ -1,0 +1,30 @@
+@import "./unit.styl"
+// 一行溢出隐藏
+overOneLine(width = '100%' maxW = 'auto', textIndent = '0em') {
+  widthVal = maxW ? 'auto' : width
+  width unitCover(widthVal)
+  maxWidth: unitCover(maxW)
+  overflow: 'hidden'
+  textOverflow: 'ellipsis'
+  white-space: 'nowrap'
+  text-indent: textIndent
+}
+// 两行溢出隐藏
+overTwoLine(lh, textIndent='0em')
+  line-height unitCover(lh)
+  max-height unitCover(lh * 2)
+  display -webkit-box
+  -webkit-box-orient 'vertical'
+  -webkit-line-clamp 2
+  overflow hidden
+  text-indent textIndent
+
+// 三行及以上溢出隐藏
+overMoreLine(clamp = 3, lh, textIndent = '0em')
+  line-height lh
+  max-height unitCover(lh * clamp)
+  display -webkit-box
+  -webkit-box-orient 'vertical'
+  -webkit-line-clamp clamp
+  overflow hidden
+  text-indent textIndent

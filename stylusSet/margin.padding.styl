@@ -1,0 +1,46 @@
+@import "./unit.styl"
+// 《-----------margin属性设置-------》
+mgl() {
+  margin-left: unitCover(arguments[0])
+}
+mgr() {
+  margin-right: unitCover(arguments[0])
+}
+mgt() {
+  margin-top: unitCover(arguments[0])
+}
+mgb() {
+  margin-bottom: unitCover(arguments[0])
+}
+// 通用margin
+mg() {
+  margin invoke(arguments)
+}
+
+// 《-----------padding属性设置-------》
+pdl() {
+  padding-left: unitCover(arguments[0])
+}
+pdr() {
+  padding-right: unitCover(arguments[0])
+}
+pdt() {
+  padding-top: unitCover(arguments[0])
+}
+pdb() {
+  padding-bottom: unitCover(arguments[0])
+}
+// 垂直方向上下设置
+pdv() {
+  padding-top: unitCover(arguments[0])
+  padding-bottom: unitCover(arguments[1])
+}
+// 水平方向左右设置
+pdh() {
+  padding-left: unitCover(arguments[0])
+  padding-right: unitCover(arguments[1])
+}
+// 通用padding
+pad() {
+  padding invoke(arguments)
+}

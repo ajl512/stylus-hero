@@ -1,0 +1,23 @@
+@import "./unit.styl"
+
+base = './img/'
+// 《----------背景图的宽高尺寸设置------》
+bg(img) {
+  url = getFullPath(base + img)
+  background url(url) center / contain no-repeat
+}
+// 自动读取并设置宽高和背景图 =》 bgi 'bg'
+bgi(img) {
+  url = getFullPath(base + img)
+  width = unitCover(image-size(url)[0])
+  height = unitCover(image-size(url)[1])
+  wh width height
+  background-size: width height
+  background url(url) center / contain no-repeat
+}
+// 旧写法遗留
+bg-size($w, $h, $img) {
+  bg($img)
+  wh($w, $h)
+  background-size: $w $h
+}

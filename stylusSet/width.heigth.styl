@@ -1,0 +1,22 @@
+@import "./unit.styl"
+
+// 《-----------宽高尺寸属性设置-------》
+w() {
+  width unitCover(arguments[0])
+}
+h() {
+  height  unitCover(arguments[0])
+}
+wh() {
+  width: unitCover(arguments[0])
+  height  unitCover(arguments[1])
+}
+
+// 兼容旧的写法
+w-h($w, $h)
+  width unitCover($w)
+  height unitCover($h)
+
+square($size) {
+  w-h($size, $size);
+}

@@ -1,0 +1,45 @@
+// absolute水平居中
+pxc = @block {
+  position absolute
+  left 50%
+  transform transleteX(-50%)
+}
+// absolute垂直居中
+pyc = @block {
+  position absolute
+  top 50%
+  transform transleteY(-50%)
+}
+// absolute水平和垂直方向均居中
+pxyc = @block {
+  position absolute
+  left 50%
+  top 50%
+  transform translate3d(-50%, -50%, 0)
+}
+
+// flex 水平居中
+fxc = @block {
+  display flex
+  justify-content center
+}
+// flex 垂直居中
+fyc = @block {
+  display flex
+  align-items center
+}
+// flex 水平垂直方向均居中
+fxyc = @block {
+  display flex
+  align-items center
+  justify-content center
+}
+// 设置纵轴为主轴
+f-col = @block {
+  flex-direction column
+}
+
+/**使用方式
+.wrap
+  {fyc}
+*/

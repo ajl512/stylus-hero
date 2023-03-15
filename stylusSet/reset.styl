@@ -1,0 +1,61 @@
+@import "./unit.styl"
+// 重置原生css属性; 将对属性值进行单位转换
+width() {
+  width: unitCover(arguments[0])
+}
+
+height() {
+  height unitCover(arguments[0])
+}
+
+margin() {
+  margin invoke(arguments)
+}
+
+margin-left() {
+  margin-left: unitCover(arguments[0])
+}
+
+margin-right() {
+  margin-right: unitCover(arguments[0])
+}
+
+margin-top() {
+  margin-top: unitCover(arguments[0])
+}
+
+margin-bottom() {
+  margin-bottom: unitCover(arguments[0])
+}
+
+padding() {
+  padding invoke(arguments)
+}
+
+padding-left() {
+  padding-left: unitCover(arguments[0])
+}
+
+padding-right() {
+  padding-right: unitCover(arguments[0])
+}
+
+padding-top() {
+  padding-top: unitCover(arguments[0])
+}
+
+padding-bottom() {
+  padding-bottom: unitCover(arguments[0])
+}
+
+line-height() {
+  line-height unitCover(arguments[0])
+}
+
+font-size() {
+  font-size unitCover(arguments[0])
+}
+
+border-radius() {
+  border-radius invoke(arguments)
+}
